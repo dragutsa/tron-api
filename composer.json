@@ -10,19 +10,9 @@
             "email": "steein.shamsudin@gmail.com"
         }
     ],
-    "keywords": [
-        "iexbase",
-        "tron-lib",
-        "tron-php",
-        "tron-api",
-        "tron-rest-api"
-    ],
-
     "require": {
         "php": "^8.0",
         "guzzlehttp/guzzle": "^7.0",
-        "iexbase/web3.php": "^2.0.1",
-        "kornrunner/secp256k1": "^0.1.2",
         "simplito/elliptic-php": "^1.0",
         "ext-json": "*",
         "ext-bcmath": "*"
