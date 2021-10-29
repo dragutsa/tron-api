@@ -38,7 +38,7 @@ class Contract
     /**
      * provider
      *
-     * @var \Web3\Providers\Provider
+     * @var \IEXBase\TronAPI\Web3\Providers\Provider
      */
     protected $provider;
 
@@ -87,14 +87,14 @@ class Contract
     /**
      * eth
      *
-     * @var \Web3\Eth
+     * @var \IEXBase\TronAPI\Web3\Eth
      */
     protected $eth;
 
     /**
      * ethabi
      *
-     * @var \Web3\Contracts\Ethabi
+     * @var \IEXBase\TronAPI\Web3\Contracts\Ethabi
      */
     protected $ethabi;
 
@@ -108,7 +108,7 @@ class Contract
     /**
      * construct
      *
-     * @param string|\Web3\Providers\Provider $provider
+     * @param string|Provider $provider
      * @param string|\stdClass|array $abi
      * @param mixed $defaultBlock
      * @return void
@@ -218,7 +218,7 @@ class Contract
     /**
      * getProvider
      *
-     * @return \Web3\Providers\Provider
+     * @return \IEXBase\TronAPI\Web3\Providers\Provider
      */
     public function getProvider()
     {
@@ -337,7 +337,7 @@ class Contract
     /**
      * getEth
      *
-     * @return \Web3\Eth
+     * @return \IEXBase\TronAPI\Web3\Eth
      */
     public function getEth()
     {

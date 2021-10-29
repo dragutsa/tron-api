@@ -71,6 +71,17 @@ class BigInteger
 
         return $this->assignValue($value);
     }
+    /**
+     * Converts a BigInteger to a hex string (eg. base-16).
+     *
+     * @param bool $twos_compliment
+     * @return string
+     */
+
+    public function toHex($twos_compliment = false): string
+    {
+        return $this->value->toHex($twos_compliment);
+    }
 
     /**
      * Adds the given value to this value.

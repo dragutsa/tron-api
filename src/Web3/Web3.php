@@ -26,42 +26,42 @@ class Web3
     /**
      * provider
      *
-     * @var \Web3\Providers\Provider
+     * @var \IEXBase\TronAPI\Web3\Providers\Provider
      */
     protected $provider;
 
     /**
      * eth
      *
-     * @var \Web3\Eth
+     * @var \IEXBase\TronAPI\Web3\Eth
      */
     protected $eth;
 
     /**
      * net
      *
-     * @var \Web3\Net
+     * @var \IEXBase\TronAPI\Web3\Net
      */
     protected $net;
 
     /**
      * personal
      *
-     * @var \Web3\Personal
+     * @var \IEXBase\TronAPI\Web3\Personal
      */
     protected $personal;
 
     /**
      * shh
      *
-     * @var \Web3\Shh
+     * @var \IEXBase\TronAPI\Web3\Shh
      */
     protected $shh;
 
     /**
      * utils
      *
-     * @var \Web3\Utils
+     * @var \IEXBase\TronAPI\Web3\Utils
      */
     protected $utils;
 
@@ -84,7 +84,7 @@ class Web3
     /**
      * construct
      *
-     * @param string|\Web3\Providers\Provider $provider
+     * @param string|Provider $provider
      * @return void
      */
     public function __construct($provider)
@@ -183,7 +183,7 @@ class Web3
     /**
      * getProvider
      *
-     * @return \Web3\Providers\Provider
+     * @return \IEXBase\TronAPI\Web3\Providers\Provider
      */
     public function getProvider()
     {
@@ -208,12 +208,12 @@ class Web3
     /**
      * getEth
      *
-     * @return \Web3\Eth
+     * @return \IEXBase\TronAPI\Web3\Eth
      */
     public function getEth()
     {
         if (!isset($this->eth)) {
-            $eth = new Eth($this->provider);
+            $eth = new \IEXBase\TronAPI\Web3\Eth($this->provider);
             $this->eth = $eth;
         }
         return $this->eth;
@@ -222,7 +222,7 @@ class Web3
     /**
      * getNet
      *
-     * @return \Web3\Net
+     * @return \IEXBase\TronAPI\Web3\Net
      */
     public function getNet()
     {
@@ -236,7 +236,7 @@ class Web3
     /**
      * getPersonal
      *
-     * @return \Web3\Personal
+     * @return \IEXBase\TronAPI\Web3\Personal
      */
     public function getPersonal()
     {
@@ -250,7 +250,7 @@ class Web3
     /**
      * getShh
      *
-     * @return \Web3\Shh
+     * @return \IEXBase\TronAPI\Web3\Shh
      */
     public function getShh()
     {
@@ -264,7 +264,7 @@ class Web3
     /**
      * getUtils
      *
-     * @return \Web3\Utils
+     * @return \IEXBase\TronAPI\Web3\Utils
      */
     public function getUtils()
     {
