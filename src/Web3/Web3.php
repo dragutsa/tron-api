@@ -117,7 +117,7 @@ class Web3
         $class = explode('\\', get_class());
 
         if (preg_match('/^[a-zA-Z0-9]+$/', $name) === 1) {
-            $method = strtolower($class[1]) . '_' . $name;
+            $method = 'web3_' . $name;
 
             if (!in_array($method, $this->allowedMethods)) {
                 throw new \RuntimeException('Unallowed rpc method: ' . $method);
@@ -133,7 +133,7 @@ class Web3
             }
             if (!array_key_exists($method, $this->methods)) {
                 // new the method
-                $methodClass = sprintf("\Web3\Methods\%s\%s", ucfirst($class[1]), ucfirst($name));
+                $methodClass = sprintf("\Web3\Methods\Web3\%s", ucfirst($name));
                 $methodObject = new $methodClass($method, $arguments);
                 $this->methods[$method] = $methodObject;
             } else {
