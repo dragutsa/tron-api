@@ -75,10 +75,8 @@ class Shh
             throw new \RuntimeException('Please set provider first.');
         }
 
-        $class = explode('\\', get_class());
-
         if (preg_match('/^[a-zA-Z0-9]+$/', $name) === 1) {
-            $method = strtolower($class[1]) . '_' . $name;
+            $method = 'shh_' . $name;
 
             if (!in_array($method, $this->allowedMethods)) {
                 throw new \RuntimeException('Unallowed rpc method: ' . $method);
@@ -94,7 +92,7 @@ class Shh
             }
             if (!array_key_exists($method, $this->methods)) {
                 // new the method
-                $methodClass = sprintf("\Web3\Methods\%s\%s", ucfirst($class[1]), ucfirst($name));
+                $methodClass = sprintf("\Web3\Methods\Shh\%s", ucfirst($name));
                 $methodObject = new $methodClass($method, $arguments);
                 $this->methods[$method] = $methodObject;
             } else {
