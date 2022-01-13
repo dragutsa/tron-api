@@ -91,7 +91,7 @@ class Net
             }
             if (!array_key_exists($method, $this->methods)) {
                 // new the method
-                $methodClass = sprintf("\Web3\Methods\Net\%s", ucfirst($name));
+                $methodClass = sprintf("IEXBase\TronAPI\Web3\Methods\Net\%s", ucfirst($name));
                 $methodObject = new $methodClass($method, $arguments);
                 $this->methods[$method] = $methodObject;
             } else {
