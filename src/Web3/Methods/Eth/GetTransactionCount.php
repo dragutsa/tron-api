@@ -47,9 +47,7 @@ class GetTransactionCount extends EthMethod
      *
      * @var array
      */
-    protected $outputFormatters = [
-        BigNumberFormatter::class
-    ];
+    protected $outputFormatters = [];
 
     /**
      * defaultValues
