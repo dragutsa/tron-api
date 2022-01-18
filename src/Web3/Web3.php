@@ -133,7 +133,7 @@ class Web3
             }
             if (!array_key_exists($method, $this->methods)) {
                 // new the method
-                $methodClass = sprintf("\Web3\Methods\Web3\%s", ucfirst($name));
+                $methodClass = sprintf("IEXBase\TronAPI\Web3\Methods\Web3\%s", ucfirst($name));
                 $methodObject = new $methodClass($method, $arguments);
                 $this->methods[$method] = $methodObject;
             } else {
